@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" role="img" aria-labelledby="title desc">
+  <title id="title">Sparkla Product Concept</title>
+  <desc id="desc">Two Sparkla can illustrations in blue and lime flavors.</desc>
+  <defs>
+    <linearGradient id="canBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5ca1ff"/>
+      <stop offset="100%" stop-color="#2f7bff"/>
+    </linearGradient>
+    <linearGradient id="canLime" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#75e4ba"/>
+      <stop offset="100%" stop-color="#29c7b8"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="420" fill="#f4fbff"/>
+  <circle cx="120" cy="70" r="18" fill="#d8edff"/>
+  <circle cx="630" cy="110" r="24" fill="#d4fff5"/>
+  <rect x="180" y="75" width="140" height="260" rx="28" fill="url(#canBlue)"/>
+  <rect x="380" y="75" width="140" height="260" rx="28" fill="url(#canLime)"/>
+  <rect x="190" y="75" width="120" height="18" rx="9" fill="#dfe9ff" opacity="0.8"/>
+  <rect x="390" y="75" width="120" height="18" rx="9" fill="#e3fff7" opacity="0.8"/>
+  <text x="250" y="185" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Tahoma, sans-serif" font-size="24" font-weight="700">SPARKLA</text>
+  <text x="250" y="220" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Tahoma, sans-serif" font-size="14">Calming Ginger</text>
+  <text x="450" y="185" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Tahoma, sans-serif" font-size="24" font-weight="700">SPARKLA</text>
+  <text x="450" y="220" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Tahoma, sans-serif" font-size="14">Calming Lime</text>
+  <circle cx="210" cy="255" r="7" fill="#ffffff" opacity="0.85"/>
+  <circle cx="290" cy="273" r="5" fill="#ffffff" opacity="0.7"/>
+  <circle cx="425" cy="250" r="7" fill="#ffffff" opacity="0.85"/>
+  <circle cx="490" cy="272" r="5" fill="#ffffff" opacity="0.7"/>
+</svg>
