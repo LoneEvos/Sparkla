@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+body.cursor-enhanced {
+  cursor: none;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, sans-serif;
@@ -21,6 +25,50 @@ body {
   background: linear-gradient(165deg, var(--bg) 0%, var(--bg-soft) 52%, #e8f7ef 100%);
   line-height: 1.6;
   transition: background 260ms ease, color 220ms ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2eb4d0;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-ring {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid rgba(46, 180, 208, 0.55);
+  transform: translate(-50%, -50%);
+  transition: width 220ms ease, height 220ms ease, border-color 220ms ease, background 220ms ease;
+}
+
+body.cursor-active .cursor-dot,
+body.cursor-active .cursor-ring {
+  opacity: 1;
+}
+
+body.cursor-hover .cursor-ring {
+  width: 46px;
+  height: 46px;
+  border-color: rgba(244, 213, 107, 0.8);
+  background: rgba(244, 213, 107, 0.08);
 }
 
 .topbar {
@@ -107,6 +155,7 @@ main {
   border: 1px solid var(--border);
   border-radius: 18px;
   margin-top: 18px;
+  box-shadow: 0 16px 34px rgba(69, 164, 185, 0.15);
 }
 
 h1 {
@@ -175,6 +224,23 @@ h1 {
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 18px;
+}
+
+.hero,
+.section {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.hero.is-visible,
+.section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-focus {
+  animation: sectionFocusPulse 760ms ease;
 }
 
 .section h2 {
@@ -266,11 +332,16 @@ h1 {
   display: flex;
   width: 300%;
   transition: transform 430ms ease;
+  will-change: transform;
 }
 
 .company-panel {
   width: calc(100% / 3);
   padding: 8px 4px;
+}
+
+.company-panel ul {
+  color: var(--muted);
 }
 
 .card:hover {
@@ -326,6 +397,18 @@ h1 {
   }
 }
 
+@keyframes sectionFocusPulse {
+  0% {
+    box-shadow: 0 0 0 rgba(59, 185, 215, 0);
+  }
+  45% {
+    box-shadow: 0 0 0 5px rgba(59, 185, 215, 0.22);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(59, 185, 215, 0);
+  }
+}
+
 @media (max-width: 760px) {
   .topbar {
     align-items: flex-start;
@@ -334,5 +417,16 @@ h1 {
 
   .nav {
     width: 100%;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  body.cursor-enhanced {
+    cursor: auto;
+  }
+
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
   }
 }

@@ -7,9 +7,11 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
   <header class="topbar">
     <div class="brand-wrap">
-      <img class="brand-logo" src="C:/Users/ASUS TUF Dash/.cursor/projects/d-cursor1-2/assets/c__Users_ASUS_TUF_Dash_AppData_Roaming_Cursor_User_workspaceStorage_a4167b1c93549398b718174260f871d7_images_ChatGPT_Image_Apr_19__2026__10_46_28_PM-c6ffeb4e-db36-4bbf-b5c8-4a28267d0e4b.png" alt="Sparkla logo">
+      <img class="brand-logo" src="/assets/sparkla-logo.png" alt="Sparkla logo">
       <div class="brand">SPARKLA</div>
     </div>
     <nav class="nav">
@@ -35,21 +37,21 @@
       </div>
       <div class="hero-media">
         <figure class="product-figure">
-          <img class="product-shot" src="C:/Users/ASUS TUF Dash/.cursor/projects/d-cursor1-2/assets/c__Users_ASUS_TUF_Dash_AppData_Roaming_Cursor_User_workspaceStorage_a4167b1c93549398b718174260f871d7_images_ChatGPT_Image_Apr_19__2026__10_46_40_PM-502295d5-355c-49a2-9d13-e626e8e31707.png" alt="Sparkla product bottles">
+          <img class="product-shot" src="/assets/sparkla-product.png" alt="Sparkla product bottles">
           <figcaption data-i18n="product_caption">Sparkla product concept visual: Calming Ginger and Calming Lime.</figcaption>
         </figure>
       </div>
       <div class="stats-strip">
         <article class="stat-card">
-          <p class="stat-number">18-35</p>
+          <p class="stat-number" data-count="35" data-prefix="18-" data-suffix="">18-35</p>
           <p data-i18n="stat_1">Core urban target segment</p>
         </article>
         <article class="stat-card">
-          <p class="stat-number">2</p>
+          <p class="stat-number" data-count="2">2</p>
           <p data-i18n="stat_2">Flavor variants</p>
         </article>
         <article class="stat-card">
-          <p class="stat-number">5</p>
+          <p class="stat-number" data-count="5">5</p>
           <p data-i18n="stat_3">IMC communication pillars</p>
         </article>
       </div>
@@ -208,6 +210,6 @@
     <p data-i18n="footer_text">Sparkla - Better Spark, Better Choice</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
